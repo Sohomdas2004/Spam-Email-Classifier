@@ -19,7 +19,7 @@ Model evaluation using metrics such as accuracy, precision, recall, F1-score, co
 
 Ability to predict on new/unseen emails
 
-Repository Structure
+**Repository Structure**__
 .
 
 ├── README.md
