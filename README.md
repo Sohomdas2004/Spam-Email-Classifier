@@ -1,44 +1,27 @@
-**Spam Email Classifier**
+_**Spam Email Classifier**_
 
 A machine learning pipeline to classify emails as spam or ham (non-spam) using a bag-of-words + classifier approach.
 
-**🧰 Project Overview**
+_**Project Overview**_
 
-This project shows how to build a text classification system (spam detector) using:
+This project builds a text classification system to distinguish spam emails from ham (legitimate) emails. It uses a dataset of labeled email messages (spam vs. not spam) and applies standard text preprocessing, vectorization, and classification algorithms to build a predictive model.
 
-A dataset (CSV) of labeled emails
+_**Features**_
+Text preprocessing (cleaning, tokenization, stopword removal, etc.)
 
-Text preprocessing (tokenization, vectorization)
+Vectorization using CountVectorizer or TF-IDF
 
-A ColumnTransformer / Pipeline
+Use of sklearn Pipeline and ColumnTransformer for clean workflows
 
-A classification algorithm (e.g. Multinomial Naive Bayes, Logistic Regression, etc.)
+Multiple classification algorithms (e.g. Naive Bayes, Logistic Regression)
 
-Prediction on new emails
+Model evaluation using metrics such as accuracy, precision, recall, F1-score, confusion matrix
 
-It is built in a Google Colab note
+Ability to predict on new/unseen emails
 
-**🧩 How It Works (High-Level)**
-
-Load data
-Read a CSV file containing email messages and their labels (spam / not spam).
-
-Preprocessing & Feature Engineering
-
-Use CountVectorizer (or TfidfVectorizer) to convert raw email text into numeric vectors (word counts or tf-idf)
-
-Possibly clean text (lowercasing, removing punctuation, stopwords)
-
-Use a ColumnTransformer (if you have multiple input columns) or directly apply the vectorizer to the “Message” column
-
-Label Encoding
-Encode textual labels “spam” / “ham” into numeric labels (e.g. 0, 1) using LabelEncoder.
-
-Model Training
-Build a Pipeline that combines the vectorizer (and any other preprocessing steps) and a classification algorithm (e.g. MultinomialNB, LogisticRegression, etc.). Fit on the training data.
-
-Evaluation
-Evaluate on a holdout set (test set) using metrics such as accuracy, precision, recall, F1-score, confusion matrix.
-
-Inference / Prediction
-Use the trained pipeline to predict new, unseen email messages. For a single message, wrap it in a structure with the correct feature name (e.g. as a DataFrame with column “Message”) before calling .predict().
+Repository Structure
+.
+├── README.md
+├── Spamemailclassifier.ipynb     ← main Jupyter Notebook  
+├── requirements.txt              ← Python dependencies  
+├── spam.csv                       ← dataset  
