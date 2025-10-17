@@ -22,6 +22,9 @@ Ability to predict on new/unseen emails
 Repository Structure
 .
 ├── README.md
-├── Spamemailclassifier.ipynb     ← main Jupyter Notebook  
+
+├── Spamemailclassifier.ipynb     ← main Jupyter Notebook
+
 ├── requirements.txt              ← Python dependencies  
+
 ├── spam.csv                       ← dataset  
